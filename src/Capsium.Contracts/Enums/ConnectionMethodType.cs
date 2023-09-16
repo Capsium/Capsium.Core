@@ -1,0 +1,22 @@
+﻿namespace Capsium.Gateway.WiFi;
+
+/// <summary>
+/// Describes the Wifi connection method type.
+/// </summary>
+public enum ConnectionMethodType
+{
+    /// <summary>
+    /// Default.
+    /// </summary>
+    Default = 0,
+
+    /// <summary>
+    /// WPS pin.
+    /// </summary>
+    WpsPin = 1,
+
+    /// <summary>
+    /// WPS protected setup.
+    /// </summary>
+    WpsPushButton = 2
+}

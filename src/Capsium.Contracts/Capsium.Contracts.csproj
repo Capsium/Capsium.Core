@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+	 <LangVersion>Preview</LangVersion>
+  </PropertyGroup>
+ <ItemGroup>
+   <ProjectReference Include="..\Capsium.Logging\Capsium.Logging.csproj" />
+   <ProjectReference Include="..\Capsium.Units\Capsium.Units.csproj" />
+ </ItemGroup>
+
+</Project>

@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33027.239
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capsium.Contracts", "Capsium.Contracts\Capsium.Contracts.csproj", "{870699B1-0688-485A-8080-64D4897C0AAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capsium.Logging", "Capsium.Logging\Capsium.Logging.csproj", "{37A7FB23-4FD2-4038-BDBB-477FF0EECD44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capsium.Units", "Capsium.Units\Capsium.Units.csproj", "{7040606C-E69D-429A-BBDA-08C88E17152F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{73772C68-EF2D-41C1-9F91-2FCAF9BC8DA9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bus", "Bus", "{16973FE6-7D7D-4E90-8445-5DF1203A9533}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capsium.Modbus", "Capsium.Modbus\Capsium.Modbus.csproj", "{7F80390E-3DA7-4277-811B-CD954CB51C65}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5D6B2C4C-CAC3-4194-A407-75AA827AC639}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capsium.Core", "Capsium.Core\Capsium.Core.csproj", "{9B37C410-6C53-4925-982B-5719018FC019}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{870699B1-0688-485A-8080-64D4897C0AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870699B1-0688-485A-8080-64D4897C0AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870699B1-0688-485A-8080-64D4897C0AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870699B1-0688-485A-8080-64D4897C0AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37A7FB23-4FD2-4038-BDBB-477FF0EECD44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37A7FB23-4FD2-4038-BDBB-477FF0EECD44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37A7FB23-4FD2-4038-BDBB-477FF0EECD44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37A7FB23-4FD2-4038-BDBB-477FF0EECD44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7040606C-E69D-429A-BBDA-08C88E17152F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7040606C-E69D-429A-BBDA-08C88E17152F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7040606C-E69D-429A-BBDA-08C88E17152F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7040606C-E69D-429A-BBDA-08C88E17152F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F80390E-3DA7-4277-811B-CD954CB51C65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F80390E-3DA7-4277-811B-CD954CB51C65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F80390E-3DA7-4277-811B-CD954CB51C65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F80390E-3DA7-4277-811B-CD954CB51C65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B37C410-6C53-4925-982B-5719018FC019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B37C410-6C53-4925-982B-5719018FC019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B37C410-6C53-4925-982B-5719018FC019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B37C410-6C53-4925-982B-5719018FC019}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{870699B1-0688-485A-8080-64D4897C0AAE} = {73772C68-EF2D-41C1-9F91-2FCAF9BC8DA9}
+		{37A7FB23-4FD2-4038-BDBB-477FF0EECD44} = {73772C68-EF2D-41C1-9F91-2FCAF9BC8DA9}
+		{7040606C-E69D-429A-BBDA-08C88E17152F} = {73772C68-EF2D-41C1-9F91-2FCAF9BC8DA9}
+		{7F80390E-3DA7-4277-811B-CD954CB51C65} = {16973FE6-7D7D-4E90-8445-5DF1203A9533}
+		{9B37C410-6C53-4925-982B-5719018FC019} = {5D6B2C4C-CAC3-4194-A407-75AA827AC639}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {482037F7-B031-45E5-AC65-7A1600BD2A31}
+	EndGlobalSection
+EndGlobal

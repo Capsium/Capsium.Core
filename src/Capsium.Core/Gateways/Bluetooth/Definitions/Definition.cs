@@ -1,0 +1,45 @@
+﻿using System.Runtime.InteropServices;
+
+namespace Capsium.Gateways.Bluetooth
+{
+    public class Definition : IDefinition
+    {
+        public string DeviceName { get; }
+        public ServiceCollection Services { get; }
+
+        public Definition(string deviceName, params IService[] services)
+        {
+            DeviceName = deviceName;
+            Services = new ServiceCollection();
+            Services.AddRange(services);
+        }
+
+        public string ToJson()
+        {
+            // serialize to JSON, but without pulling in a JSON lib dependency
+            var json = $@"{{
+                        ""deviceName"":""{DeviceName}""
+                    ";
+
+            if (Services != null && Services.Count > 0)
+            {
+                json += ", \"services\": [";
+                for (int i = 0; i < Services.Count; i++)
+                {
+                    if (Services[i] != null)
+                    {
+                        json += Services[i]?.ToJson();
+                        if (i < (Services.Count - 1))
+                        {
+                            json += ",";
+                        }
+                    }
+                }
+                json += "]";
+            }
+
+            json += "}";
+            return json;
+        }
+    }
+}
