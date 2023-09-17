@@ -13,7 +13,7 @@ public class DigitalInputPort : DigitalInputPortBase
     /// <summary>
     /// Gets or sets the port's IOController
     /// </summary>
-    protected IMeadowIOController IOController { get; set; }
+    protected ICapsiumIOController IOController { get; set; }
 
     /// <summary>
     /// Creates an instance of a DigitalInputPort
@@ -24,7 +24,7 @@ public class DigitalInputPort : DigitalInputPortBase
     /// <param name="resistorMode">The port's resistor mode</param>
     protected DigitalInputPort(
         IPin pin,
-        IMeadowIOController ioController,
+        ICapsiumIOController ioController,
         IDigitalChannelInfo channel,
         ResistorMode resistorMode
         ) : base(pin, channel)
@@ -53,7 +53,7 @@ public class DigitalInputPort : DigitalInputPortBase
     /// <param name="resistorMode">The port's resistor mode</param>
     public static DigitalInputPort From(
         IPin pin,
-        IMeadowIOController ioController,
+        ICapsiumIOController ioController,
         ResistorMode resistorMode
         )
     {

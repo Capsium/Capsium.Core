@@ -13,7 +13,7 @@ public delegate void InterruptHandler(IPin pin, bool state);
 /// <summary>
 /// Defines the GPIO Manager for interacting with digital and analog pins.
 /// </summary>
-public interface IMeadowIOController
+public interface ICapsiumIOController
 {
     /// <summary>
     /// Event triggered when an interrupt occurs on a pin.

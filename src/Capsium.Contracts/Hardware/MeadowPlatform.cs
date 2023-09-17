@@ -1,7 +1,7 @@
 ﻿namespace Capsium.Hardware
 {
     /// <summary>
-    /// Platform (hardware, etc) Meadow is currently executing on
+    /// Platform (hardware, etc) Capsium is currently executing on
     /// </summary>
     public enum CapsiumPlatform
     {
@@ -26,14 +26,14 @@
         F7CoreComputeV2 = 3,
 
         /// <summary>
-        /// Meadow for Linux
+        /// Capsium for Linux
         /// </summary>
-        MeadowForLinux,
+        CapsiumForLinux,
 
         /// <summary>
-        /// Meadow Simulation Platform
+        /// Capsium Simulation Platform
         /// </summary>
-        MeadowSimulation,
+        CapsiumSimulation,
 
         /// <summary>
         /// Windows Host OS

@@ -16,13 +16,13 @@ public class DigitalInterruptPort : DigitalInterruptPortBase
     private DigitalState _oldState = new DigitalState(false, DateTime.MinValue);
 
     /// <inheritdoc/>
-    protected IMeadowIOController IOController { get; set; }
+    protected ICapsiumIOController IOController { get; set; }
 
     private DateTime LastEventTime { get; set; } = DateTime.MinValue;
 
     protected DigitalInterruptPort(
         IPin pin,
-        IMeadowIOController ioController,
+        ICapsiumIOController ioController,
         IDigitalChannelInfo channel,
         InterruptMode interruptMode,
         ResistorMode resistorMode,
@@ -73,7 +73,7 @@ public class DigitalInterruptPort : DigitalInterruptPortBase
     /// <param name="glitchDuration">The glitch filter duration used for interrupts</param>
     public static DigitalInterruptPort From(
         IPin pin,
-        IMeadowIOController ioController,
+        ICapsiumIOController ioController,
         InterruptMode interruptMode,
         ResistorMode resistorMode,
         TimeSpan debounceDuration,

@@ -44,6 +44,6 @@ namespace Capsium.Hardware
         /// </summary>
         /// <param name="info"></param>
         /// <param name="ioController"></param>
-        void AfterStartPwm(IPwmChannelInfo info, IMeadowIOController ioController);
+        void AfterStartPwm(IPwmChannelInfo info, ICapsiumIOController ioController);
     }
 }

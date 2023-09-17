@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <LangVersion>10.0</LangVersion>
+	  <TargetFramework>net7.0</TargetFramework>
+	  <Nullable>enable</Nullable>
+	  <Nullable>enable</Nullable>
+	  <Description>An implementation of the Capsium software stack for Windows targets</Description>
+  </PropertyGroup>
+  <ItemGroup>
+	  <PackageReference Include="System.IO.Ports" Version="7.0.0" />
+	  <PackageReference Include="System.Net.WebSockets" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capsium.Core\Capsium.Core.csproj" />
+  </ItemGroup>
+</Project>

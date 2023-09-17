@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+
+		<LangVersion>10.0</LangVersion>
+		<Nullable>enable</Nullable>
+		<Description>STM32F7 .NET libraries for Wilderness Labs Meadow</Description>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Capsium.Core\Capsium.Core.csproj" />
+	</ItemGroup>
+</Project>

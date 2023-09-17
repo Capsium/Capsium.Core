@@ -56,9 +56,9 @@ namespace Capsium
         /// <summary>
         /// Retrieves the current IMeadowCloudService instance
         /// </summary>
-        public static IMeadowCloudService MeadowCloudService
+        public static ICapsiumCloudService MeadowCloudService
         {
-            get => Services?.Get<IMeadowCloudService>();
+            get => Services?.Get<ICapsiumCloudService>();
         }
 #pragma warning restore CS8603
 

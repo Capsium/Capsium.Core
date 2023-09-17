@@ -703,7 +703,7 @@ public class UpdateService : IUpdateService, ICommandService
         var shutDownTask = Resolver.App?.OnShutdown();
 
         // cancel the app run cancellation token
-        MeadowOS.AppAbort.Cancel();
+        CapsiumOS.AppAbort.Cancel();
 
         // wait for the app to return, or the timeout
         Task.WaitAny(shutDownTask, shutdownTimeoutTask);
@@ -724,9 +724,9 @@ public class UpdateService : IUpdateService, ICommandService
     private readonly ConcurrentDictionary<string, (Type CommandType, Action<object> Action)> CommandSubscriptions = new();
     private const string UntypedCommandTypeName = "<<<MEADOWCOMMAND>>>";
 
-    void ICommandService.Subscribe(Action<MeadowCommand> action)
+    void ICommandService.Subscribe(Action<CapsiumCommand> action)
     {
-        CommandSubscriptions[UntypedCommandTypeName] = (CommandType: typeof(MeadowCommand), Action: x => action((MeadowCommand)x));
+        CommandSubscriptions[UntypedCommandTypeName] = (CommandType: typeof(CapsiumCommand), Action: x => action((CapsiumCommand)x));
     }
 
     void ICommandService.Subscribe<T>(Action<T> action)
@@ -783,7 +783,7 @@ public class UpdateService : IUpdateService, ICommandService
                 return;
             }
 
-            var command = new MeadowCommand(commandName, arguments);
+            var command = new CapsiumCommand(commandName, arguments);
             value.Action(command);
         }
 

@@ -14,7 +14,7 @@ public interface ICommandService
     /// <param name="action">
     /// The action to perform when any Meadow command is received.
     /// </param>
-    void Subscribe(Action<MeadowCommand> action);
+    void Subscribe(Action<CapsiumCommand> action);
 
     /// <summary>
     /// Subscribes an action to handle a Meadow command of type T.
@@ -30,13 +30,13 @@ public interface ICommandService
     /// type name (even across namespaces), only the last subscription will be
     /// executed.
     /// </remarks>
-    void Subscribe<T>(Action<T> action) where T : IMeadowCommand, new();
+    void Subscribe<T>(Action<T> action) where T : ICapsiumCommand, new();
 
     /// <summary>
     /// Unsubscribes an action that handles a Meadow command of type T.
     /// </summary>
     /// <typeparam name="T">Type of the meadow command.</typeparam>
-    void Unsubscribe<T>() where T : IMeadowCommand, new();
+    void Unsubscribe<T>() where T : ICapsiumCommand, new();
 
     /// <summary>
     /// Unsubscribes an action to handle a generic Meadow command.

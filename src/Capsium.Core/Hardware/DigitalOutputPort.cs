@@ -11,7 +11,7 @@ public class DigitalOutputPort : DigitalOutputPortBase
     /// <summary>
     /// Gets or sets the port's IOController
     /// </summary>
-    protected IMeadowIOController IOController { get; }
+    protected ICapsiumIOController IOController { get; }
 
     /// <summary>
     /// Gets or sets the state of the port.
@@ -39,7 +39,7 @@ public class DigitalOutputPort : DigitalOutputPortBase
     /// <param name="initialOutputType"></param>
     protected DigitalOutputPort(
         IPin pin,
-        IMeadowIOController ioController,
+        ICapsiumIOController ioController,
         IDigitalChannelInfo channel,
         bool initialState,
         OutputType initialOutputType)
@@ -71,7 +71,7 @@ public class DigitalOutputPort : DigitalOutputPortBase
     /// <param name="initialState">If set to <c>true</c> initial state.</param>
     /// <param name="initialOutputType">The initial port output type.</param>
     public static DigitalOutputPort From(IPin pin,
-        IMeadowIOController ioController,
+        ICapsiumIOController ioController,
         bool initialState = false,
         OutputType initialOutputType = OutputType.PushPull)
     {

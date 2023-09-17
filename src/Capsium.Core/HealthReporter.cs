@@ -44,7 +44,7 @@ public class HealthReporter : IHealthReporter
         {
             await semaphoreSlim.WaitAsync();
 
-            var service = Resolver.Services.Get<IMeadowCloudService>();
+            var service = Resolver.Services.Get<ICapsiumCloudService>();
             var device = Resolver.Device;
 
             DirectoryInfo di = new DirectoryInfo(Resolver.Device.PlatformOS.FileSystem.FileSystemRoot);

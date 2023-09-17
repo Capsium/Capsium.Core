@@ -13,20 +13,20 @@ public static class RuntimeInformation
     /// <summary>
     /// Convenince method to check the current platform
     /// </summary>
-    /// <param name="platform">The MeadowPlatform to check against</param>
+    /// <param name="platform">The CapsiumPlatform to check against</param>
     public static bool IsPlatform(CapsiumPlatform platform)
     {
         if (!_platform.HasValue)
         {
             // this is not a great way to do this, but for now....
-            if (Directory.Exists("/meadow0"))
+            if (Directory.Exists("/Capsium0"))
             {
                 // we're an F7
                 _platform = CapsiumPlatform.F7FeatherV1;
             }
             else
             {
-                _platform = CapsiumPlatform.MeadowForLinux;
+                _platform = CapsiumPlatform.CapsiumForLinux;
             }
         }
 

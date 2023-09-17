@@ -54,7 +54,7 @@ public class AnalogInputPort : AnalogInputPortBase, IObservable<IChangeResult<Vo
     /// <summary>
     /// Gets the IOController device
     /// </summary>
-    protected IMeadowIOController IOController { get; }
+    protected ICapsiumIOController IOController { get; }
 
     // internal thread lock
     private readonly object _lock = new();
@@ -82,7 +82,7 @@ public class AnalogInputPort : AnalogInputPortBase, IObservable<IChangeResult<Vo
     /// <param name="sampleInterval">The time between readings used for calculating the average for a sample</param>
     /// <param name="referenceVoltage">The ADCs reference voltage</param>
     protected AnalogInputPort(
-                IPin pin, IMeadowIOController ioController, IAnalogChannelInfo channel,
+                IPin pin, ICapsiumIOController ioController, IAnalogChannelInfo channel,
                 int sampleCount, TimeSpan sampleInterval,
                 Voltage referenceVoltage)
         : base(pin, channel, sampleCount, sampleInterval, referenceVoltage)
@@ -112,7 +112,7 @@ public class AnalogInputPort : AnalogInputPortBase, IObservable<IChangeResult<Vo
     /// <returns></returns>
     public static AnalogInputPort From(
         IPin pin,
-        IMeadowIOController ioController,
+        ICapsiumIOController ioController,
         int sampleCount = 5)
     {
         return From(pin, ioController, sampleCount, DefaultSampleInterval, DefaultReferenceVoltage);
@@ -131,7 +131,7 @@ public class AnalogInputPort : AnalogInputPortBase, IObservable<IChangeResult<Vo
     /// <exception cref="Exception"></exception>
     public static AnalogInputPort From(
         IPin pin,
-        IMeadowIOController ioController,
+        ICapsiumIOController ioController,
         int sampleCount,
         TimeSpan sampleInterval,
         Voltage referenceVoltage)

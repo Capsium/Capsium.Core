@@ -14,7 +14,7 @@ public class BiDirectionalPort : BiDirectionalPortBase
     /// <summary>
     /// Gets or sets the port's IOController
     /// </summary>
-    protected IMeadowIOController IOController { get; }
+    protected ICapsiumIOController IOController { get; }
     protected DateTime LastEventTime { get; set; } = DateTime.MinValue;
 
     // Direction change
@@ -39,7 +39,7 @@ public class BiDirectionalPort : BiDirectionalPortBase
 
     protected BiDirectionalPort(
         IPin pin,
-        IMeadowIOController gpioController,
+        ICapsiumIOController gpioController,
         IDigitalChannelInfo channel,
         bool initialState,
         ResistorMode resistorMode = ResistorMode.Disabled,
@@ -67,7 +67,7 @@ public class BiDirectionalPort : BiDirectionalPortBase
 
     public static BiDirectionalPort From(
         IPin pin,
-        IMeadowIOController ioController,
+        ICapsiumIOController ioController,
         bool initialState = false,
         ResistorMode resistorMode = ResistorMode.Disabled,
         PortDirectionType initialDirection = PortDirectionType.Input
@@ -78,7 +78,7 @@ public class BiDirectionalPort : BiDirectionalPortBase
 
     public static BiDirectionalPort From(
         IPin pin,
-        IMeadowIOController ioController,
+        ICapsiumIOController ioController,
         bool initialState,
         ResistorMode resistorMode,
         PortDirectionType initialDirection,

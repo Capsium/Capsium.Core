@@ -24,7 +24,7 @@ namespace Capsium
         /// <summary>
         /// Gets the settings for Capsium.Cloud
         /// </summary>
-        public IMeadowCloudSettings MeadowCloudSettings { get; }
+        public ICapsiumCloudSettings MeadowCloudSettings { get; }
         /// <summary>
         /// Gets a dictionary of user supplied settings
         /// </summary>

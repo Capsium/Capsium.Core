@@ -16,7 +16,7 @@ namespace Capsium.Hardware
         /// <summary>
         /// Gets or sets the port's IOController
         /// </summary>
-        protected IMeadowIOController IOController { get; }
+        protected ICapsiumIOController IOController { get; }
         protected DateTime LastEventTime { get; set; } = DateTime.MinValue;
 
         /// <inheritdoc/>
@@ -44,7 +44,7 @@ namespace Capsium.Hardware
         protected BiDirectionalInterruptPort(
             IPin pin,
             IDigitalChannelInfo channel,
-            IMeadowIOController gpioController,
+            ICapsiumIOController gpioController,
             bool initialState,
             InterruptMode interruptMode = InterruptMode.None,
             ResistorMode resistorMode = ResistorMode.Disabled,
@@ -55,7 +55,7 @@ namespace Capsium.Hardware
 
         protected BiDirectionalInterruptPort(
             IPin pin,
-            IMeadowIOController gpioController,
+            ICapsiumIOController gpioController,
             IDigitalChannelInfo channel,
             bool initialState,
             InterruptMode interruptMode,
@@ -121,7 +121,7 @@ namespace Capsium.Hardware
 
         public static BiDirectionalInterruptPort From(
             IPin pin,
-            IMeadowIOController ioController,
+            ICapsiumIOController ioController,
             bool initialState = false,
             InterruptMode interruptMode = InterruptMode.None,
             ResistorMode resistorMode = ResistorMode.Disabled,
@@ -133,7 +133,7 @@ namespace Capsium.Hardware
 
         public static BiDirectionalInterruptPort From(
             IPin pin,
-            IMeadowIOController ioController,
+            ICapsiumIOController ioController,
             bool initialState,
             InterruptMode interruptMode,
             ResistorMode resistorMode,
