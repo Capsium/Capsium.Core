@@ -5,7 +5,7 @@
 
 		<LangVersion>10.0</LangVersion>
 		<Nullable>enable</Nullable>
-		<Description>STM32F7 .NET libraries for Wilderness Labs Meadow</Description>
+		<Description>STM32F7 .NET libraries for BMC Meadow</Description>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 
